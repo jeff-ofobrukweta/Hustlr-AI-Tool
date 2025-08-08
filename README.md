@@ -13,13 +13,15 @@
 
 ## Notable Assumptions
 
-- Product data is static and accessed from local JSON or similar source.
-- Dynamic pricing is calculated entirely on the client side, during each page load.
-- No real machine learning training is performed — ML-like behavior is simulated using weighted scoring of base price, rating, time, and category weight.
-- Time-of-day discount is applied between 12 AM and 6 AM to simulate off-peak shopping incentives.
-- Category-specific weights assume certain product types (like electronics or jewelry) naturally have different pricing strategies.
-- High-rated products (rating ≥ 4.5) are assumed to be in high demand and priced slightly higher; low-rated ones (rating < 2.5) receive discounts.
-- All final prices are formatted using psychological pricing (rounded and ending in `.99`) to simulate common e-commerce pricing strategy.
+- Product data is static and loaded from a local JSON or similar structured source.
+- All pricing logic is handled client-side at runtime — no server-side or persistent computation is involved.
+- Machine learning behavior is mimicked via heuristic scoring (e.g., base price × category weight + time-of-day + rating adjustments).
+- Discounts are only applied when the computed discounted price is strictly **less than** the original price — ensuring price integrity and preventing misleading markdowns.
+- Any computed discounted price that ends up **equal to or greater than** the original price is automatically disregarded, and the product is shown at the original price only.
+- Off-peak hour discounts (between 12 AM and 6 AM) simulate time-based pricing incentives.
+- Certain product categories (e.g., electronics, jewelry) are assumed to carry specific pricing weights based on typical e-commerce strategy.
+- High-rated products (rating ≥ 4.5) are treated as premium and priced slightly above baseline, while low-rated items (rating < 2.5) are discounted more aggressively.
+- All final prices (original and discounted) are rounded and formatted using **psychological pricing** — ensuring they end in `.99` to simulate retail pricing strategy.
 
 ## Bonus: Blockchain Integration (Optional)
 This dynamic pricing logic can be extended with blockchain via:
