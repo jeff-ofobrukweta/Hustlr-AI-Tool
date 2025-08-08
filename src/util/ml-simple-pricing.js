@@ -1,12 +1,12 @@
 const categoryWeights = {
-  electronics: 1.15, // higher margin
-  jewelery: 0.9, // more discounts
+  electronics: 1.15,
+  jewelery: 0.9,
   "men's clothing": 1.0,
   "women's clothing": 1.0,
 };
 
 const getPsychologicalPrice = (price) => {
-  return (Math.floor(price) + 0.99).toFixed(2); // E.g., 39.99
+  return (Math.floor(price) + 0.99);
 };
 
 export const getDynamicPrice = (product) => {
@@ -34,8 +34,13 @@ export const getDynamicPrice = (product) => {
 
   predictedPrice = predictedPrice * demandMultiplier * timeDiscount;
 
-  // Ensure price never goes above base price
-  const cappedPrice = Math.min(predictedPrice, basePrice);
+  // Apply psychological pricing
+  let finalPrice = getPsychologicalPrice(predictedPrice);
 
-  return getPsychologicalPrice(cappedPrice);
+  // Cap it at the original price if it's higher
+  if (finalPrice > basePrice) {
+    finalPrice = basePrice;
+  }
+
+  return finalPrice.toFixed(2);
 };
