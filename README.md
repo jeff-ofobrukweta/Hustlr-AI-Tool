@@ -1,6 +1,7 @@
 ## Snip Shots
 
-<img width="1497" height="817" alt="Screenshot 2025-08-08 at 12 07 22" src="https://github.com/user-attachments/assets/a2acca07-3f9a-4dd3-96ea-38228299fe77" />
+<img width="1497" height="817" alt="Screenshot 2025-08-08 at 12 31 14" src="https://github.com/user-attachments/assets/90304c96-e316-41b8-bf80-a91f94e426d7" />
+
 
 
 ## Tools / Libraries Used
