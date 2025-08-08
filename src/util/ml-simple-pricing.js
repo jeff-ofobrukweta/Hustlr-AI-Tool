@@ -1,5 +1,3 @@
-// src/utils/pricing.js
-
 const categoryWeights = {
   electronics: 1.15, // higher margin
   jewelery: 0.9, // more discounts
