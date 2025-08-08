@@ -1,3 +1,7 @@
+## Snip Shots
+<img width="1497" height="817" alt="Screenshot 2025-08-08 at 11 41 12" src="https://github.com/user-attachments/assets/eda4002c-af93-475a-b3ea-b06b08e0e4f4" />
+
+
 ## Tools / Libraries Used
 
 - React + Vite — frontend setup
