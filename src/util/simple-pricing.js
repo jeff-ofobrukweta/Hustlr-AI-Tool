@@ -1,7 +1,7 @@
 export const getDynamicPrice = (product) => {
   const basePrice = product.price;
-  const rating = product.rating?.rate || 3;
-  const category = product.category || "";
+  const rating = product.rating?.rate ?? 3;
+  const category = product.category ?? "";
   const currentHour = new Date().getHours();
 
   let adjustedPrice = basePrice;

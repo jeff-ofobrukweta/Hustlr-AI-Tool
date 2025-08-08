@@ -12,11 +12,11 @@ const getPsychologicalPrice = (price) => {
 };
 
 export const getDynamicPrice = (product) => {
-  const basePrice = product.price || 0;
-  const rating = product.rating?.rate || 3; // 1–5
-  const category = product.category || "other";
+  const basePrice = product.price ?? 0;
+  const rating = product.rating?.rate ?? 3; // 1–5
+  const category = product.category ?? "other";
   const hour = new Date().getHours(); // 0–23
-  const categoryWeight = categoryWeights[category] || 1.0;
+  const categoryWeight = categoryWeights[category] ?? 1.0;
 
   //Base demand-based multiplier
   let demandMultiplier = 1;
