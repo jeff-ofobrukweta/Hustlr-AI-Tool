@@ -7,11 +7,13 @@
 
 ## Notable Assumptions
 
-- Product data is static and stored in JSON.
-- Dynamic pricing is recalculated per page load using client-side logic.
-- No real backend or AI model training is used — ML logic is emulated with weighted scoring.
-- Off-peak time is defined as 12am–6am.
-- Final price always ends in .99 (consumer behavior psychology).
+- Product data is static and accessed from local JSON or similar source.
+- Dynamic pricing is calculated entirely on the client side, during each page load.
+- No real machine learning training is performed — ML-like behavior is simulated using weighted scoring of base price, rating, time, and category weight.
+- Time-of-day discount is applied between 12 AM and 6 AM to simulate off-peak shopping incentives.
+- Category-specific weights assume certain product types (like electronics or jewelry) naturally have different pricing strategies.
+- High-rated products (rating ≥ 4.5) are assumed to be in high demand and priced slightly higher; low-rated ones (rating < 2.5) receive discounts.
+- All final prices are formatted using psychological pricing (rounded and ending in `.99`) to simulate common e-commerce pricing strategy.
 
 ## Bonus: Blockchain Integration (Optional)
 This dynamic pricing logic can be extended with blockchain via:
