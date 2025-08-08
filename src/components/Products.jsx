@@ -7,6 +7,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { getDynamicPrice } from "../util/simple-pricing";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -130,7 +131,14 @@ const Products = () => {
                   </p>
                 </div>
                 <ul className="list-group list-group-flush">
-                  <li className="list-group-item lead">$ {product.price}</li>
+                  {/* <li className="list-group-item lead">$ {product.price}</li> */}
+                  <del className="text-muted me-2">
+                    ${product.price.toFixed(2)}
+                  </del>
+                  <span className="text-success fw-bold">
+                    ${getDynamicPrice(product)}
+                  </span>
+
                   {/* <li className="list-group-item">Dapibus ac facilisis in</li>
                     <li className="list-group-item">Vestibulum at eros</li> */}
                 </ul>
