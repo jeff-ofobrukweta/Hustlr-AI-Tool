@@ -1,3 +1,6 @@
+## Snip Shots
+![Uploading Screenshot 2025-08-08 at 11.41.12.png…]()
+
 ## Tools / Libraries Used
 
 - React + Vite — frontend setup
