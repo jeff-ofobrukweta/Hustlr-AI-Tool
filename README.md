@@ -17,6 +17,9 @@
 
 This dynamic pricing logic can be extended with blockchain via:
 
+## Bonus: Blockchain Integration (Optional)
+
+- The dynamic pricing engine can be enhanced using blockchain technology by enabling token-gated pricing, where users holding specific NFTs or tokens receive exclusive discounts. Additionally, pricing could be personalized through on-chain user preferences, tailoring offers based on wallet activity. Loyalty can be incentivized using smart contracts that automatically reward frequent buyers with special pricing tiers or cashback tokens.
 - Token-gated pricing: Users holding NFTs or loyalty tokens unlock better prices.
 - On-chain user preferences: Pricing tailored to wallet activity or preferences stored on-chain.
 - Loyalty Smart Contracts: Users who frequently purchase could auto-receive discounts.
